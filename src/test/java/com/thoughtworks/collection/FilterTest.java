@@ -6,7 +6,7 @@ import java.util.*;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 
-public class FilterTest {
+public class  FilterTest {
 
     @Test
     public void should_return_even() {
