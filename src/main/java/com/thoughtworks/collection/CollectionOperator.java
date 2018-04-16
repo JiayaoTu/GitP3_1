@@ -7,16 +7,13 @@ import java.util.*;
 public class CollectionOperator {
     public List<Integer> getListByInterval(int left, int right) {
         //throw new NotImplementedException();
-        List<Integer> result=new ArrayList<>();
-        if(left<right)
-        {
-            for(int i=left;i<=right;i++)
-            {
+        List<Integer> result = new ArrayList<>();
+        if (left < right) {
+            for (int i = left; i <= right; i++) {
                 result.add(i);
             }
-        }else {
-            for(int i=left;i>=right;i--)
-            {
+        } else {
+            for (int i = left; i >= right; i--) {
                 result.add(i);
             }
         }
@@ -25,21 +22,16 @@ public class CollectionOperator {
 
     public List<Integer> getEvenListByIntervals(int left, int right) {
         //throw new NotImplementedException();
-        List<Integer> result=new ArrayList<>();
-        if(left<right)
-        {
-            for(int i=left;i<=right;i++)
-            {
-                if(i%2==0)
-                {
+        List<Integer> result = new ArrayList<>();
+        if (left < right) {
+            for (int i = left; i <= right; i++) {
+                if (i % 2 == 0) {
                     result.add(i);
                 }
             }
-        }else {
-            for(int i=left;i>=right;i--)
-            {
-                if(i%2==0)
-                {
+        } else {
+            for (int i = left; i >= right; i--) {
+                if (i % 2 == 0) {
                     result.add(i);
                 }
             }
@@ -49,11 +41,9 @@ public class CollectionOperator {
 
     public List<Integer> popEvenElments(int[] array) {
         //throw new NotImplementedException();
-        List<Integer> result=new ArrayList<>();
-        for(int i=0;i<array.length;i++)
-        {
-            if(array[i]%2==0)
-            {
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
                 result.add(array[i]);
             }
         }
@@ -62,38 +52,35 @@ public class CollectionOperator {
 
     public int popLastElment(int[] array) {
         //throw new NotImplementedException();
-        return array[array.length-1];
+        return array[array.length - 1];
     }
 
     public List<Integer> popCommonElement(int[] firstArray, int[] secondArray) {
         //throw new NotImplementedException();
-       List<Integer> list1=new ArrayList<>();
-        List<Integer> list2=new ArrayList<>();
-        for(int i=0;i<firstArray.length;i++)
-        {
+        List<Integer> list1 = new ArrayList<>();
+        List<Integer> list2 = new ArrayList<>();
+        for (int i = 0; i < firstArray.length; i++) {
             list1.add(firstArray[i]);
         }
-        for(int i=0;i<secondArray.length;i++)
-        {
+        for (int i = 0; i < secondArray.length; i++) {
             list2.add(secondArray[i]);
         }
         list1.retainAll(list2);
-        return  list1;
+        return list1;
     }
 
     public List<Integer> addUncommonElement(Integer[] firstArray, Integer[] secondArray) {
         //throw new NotImplementedException()
-        List<Integer> list1=Arrays.asList(firstArray);
-        List<Integer> list2=Arrays.asList(secondArray);
-       List<Integer> result=new ArrayList<>(list1);
-       for(Integer i:list2)
-           if(list1.contains(i))
-           {
+        List<Integer> list1 = Arrays.asList(firstArray);
+        List<Integer> list2 = Arrays.asList(secondArray);
+        List<Integer> result = new ArrayList<>(list1);
+        for (Integer i : list2)
+            if (list1.contains(i)) {
 
-           }else{
-           result.add(i);
-           }
-           return result;
+            } else {
+                result.add(i);
+            }
+        return result;
     }
 
 

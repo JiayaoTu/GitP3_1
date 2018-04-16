@@ -17,25 +17,23 @@ public class MyMap {
     }
 
     public List<Integer> getTriple() {
-       // throw new NotImplementedException();
+        // throw new NotImplementedException();
         List<Integer> result = new ArrayList<>();
-        for(Integer i:array)
-        {
-            result.add(i*3);
+        for (Integer i : array) {
+            result.add(i * 3);
         }
         return result;
 
     }
 
     public List<String> mapLetter() {
-       // throw new NotImplementedException();
+        // throw new NotImplementedException();
         List<String> result = new ArrayList<>();
-        for(Integer i:array)
-        {
+        for (Integer i : array) {
 
-            int temp=i+96;
-            char c=(char) temp;
-            String s=String.valueOf(c);
+            int temp = i + 96;
+            char c = (char) temp;
+            String s = String.valueOf(c);
             result.add(s);
 
         }
@@ -43,26 +41,23 @@ public class MyMap {
     }
 
     public List<String> mapLetters() {
-       // throw new NotImplementedException();
+        // throw new NotImplementedException();
         List<String> result = new ArrayList<>();
-        for(Integer i:array)
-        {
-            if(i>=1&&i<=26)
-            {
-                int temp=i+96;
-                char c=(char) temp;
-                String s=String.valueOf(c);
+        for (Integer i : array) {
+            if (i >= 1 && i <= 26) {
+                int temp = i + 96;
+                char c = (char) temp;
+                String s = String.valueOf(c);
                 result.add(s);
-            }else if(i>26&&i<=52)
-            {
-                int temp=i-26+96;
-                char c=(char) temp;
-                String s="a"+String.valueOf(c);
+            } else if (i > 26 && i <= 52) {
+                int temp = i - 26 + 96;
+                char c = (char) temp;
+                String s = "a" + String.valueOf(c);
                 result.add(s);
-            }else{
-                int temp=i-26*2+96;
-                char c=(char) temp;
-                String s="b"+String.valueOf(c);
+            } else {
+                int temp = i - 26 * 2 + 96;
+                char c = (char) temp;
+                String s = "b" + String.valueOf(c);
                 result.add(s);
             }
         }
@@ -74,8 +69,7 @@ public class MyMap {
         List<Integer> result = new ArrayList<>();
 
         Collections.sort(array);
-        for(int i=array.size()-1;i>=0;i--)
-        {
+        for (int i = array.size() - 1; i >= 0; i--) {
             result.add(array.get(i));
         }
         return result;
